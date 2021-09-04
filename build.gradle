@@ -1,10 +1,10 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.11-SNAPSHOT'
+	id 'org.springframework.boot' version '2.6.0-SNAPSHOT'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.example'
+group = 'com.example.bookish'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
