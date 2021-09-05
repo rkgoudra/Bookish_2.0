@@ -1,5 +1,9 @@
 package com.example.bookish.model;
 
+
+
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -21,6 +25,24 @@ public class BookEntity {
 	 	@Column(name = "book_author")
 	    private String book_author;
 	 	
+	 	@Column(name="receiver_name")
+	 	private String receiver_name;
+	 	
+	 	@Column(name="expected_return_date")
+	 	private Date expected_return_date;
+	 	
+		public String getReceiver_name() {
+			return receiver_name;
+		}
+		public void setReceiver_name(String receiver_name) {
+			this.receiver_name = receiver_name;
+		}
+		public Date getExpected_return_date() {
+			return expected_return_date;
+		}
+		public void setExpected_return_date(Date expected_return_date) {
+			this.expected_return_date = expected_return_date;
+		}
 		public Integer getId() {
 			return id;
 		}
