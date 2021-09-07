@@ -1,5 +1,7 @@
 package com.example.bookish.service;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +19,45 @@ public class BooksService {
 	
 	public String addBooks(BookEntity books) {
 		try {
+		if(books.getId()!=null) {
+			BookEntity bookentity=bookRepository.findById(books.getId()).orElse(null);
+			if(bookentity!=null) {
+				bookentity.setBook_author(books.getBook_author());
+				bookentity.setBook_name(books.getBook_name());
+				bookRepository.save(bookentity);
+				
+			}
+			return "Book updated successfully.";
+		}
+		else {
 		bookRepository.save(books);
 		return "Book added successfully";
+		}
+		
 		}catch (Exception e) {
 			return "error while saving"+e;	
 		}
 		
+	}
+	
+	public String deleteBooks(BookEntity books) {
+		try {
+		if(books.getId()!=null) {
+			bookRepository.deleteById(books.getId());
+		}
+		return "Book Deleted successfully";
+		}catch(Exception e) {
+			return "error while Deleting"+e;	
+		}
+		
+	}
+	
+	public List<BookEntity> viewBooks() {
+		try {
+			return bookRepository.findAll();
+		}catch(Exception e) {
+			System.out.println("error while Fetching"+e);
+		}
+		return null;
 	}
 }
