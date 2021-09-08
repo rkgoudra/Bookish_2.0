@@ -31,6 +31,69 @@ public class BookEntity {
 	 	@Column(name="expected_return_date")
 	 	private Date expected_return_date;
 	 	
+	 	@Column(name="language")
+	 	private String language;
+	 	
+	 	@Column(name="gener_id")
+	 	private Integer gener_id;
+	 	
+	 	@Column(name="status")
+	 	private Integer status;
+	 	
+	 	@Column(name="description")
+	 	private String description;
+	 	
+	 	@Column(name="user_id")
+	 	private Integer user_id;
+	 	
+	 	@Column(name="delet_status")
+	 	private Integer delet_status;
+	 	
+	 	@Column(name="isbn")
+	 	private Integer isbn;
+	 	
+		public String getLanguage() {
+			return language;
+		}
+		public void setLanguage(String language) {
+			this.language = language;
+		}
+		public Integer getGener_id() {
+			return gener_id;
+		}
+		public void setGener_id(Integer gener_id) {
+			this.gener_id = gener_id;
+		}
+		public Integer getStatus() {
+			return status;
+		}
+		public void setStatus(Integer status) {
+			this.status = status;
+		}
+		public String getDescription() {
+			return description;
+		}
+		public void setDescription(String description) {
+			this.description = description;
+		}
+		public Integer getUser_id() {
+			return user_id;
+		}
+		public void setUser_id(Integer user_id) {
+			this.user_id = user_id;
+		}
+		public Integer getDelet_status() {
+			return delet_status;
+		}
+		public void setDelet_status(Integer delet_status) {
+			this.delet_status = delet_status;
+		}
+		public Integer getIsbn() {
+			return isbn;
+		}
+		public void setIsbn(Integer isbn) {
+			this.isbn = isbn;
+		}
 		public String getReceiver_name() {
 			return receiver_name;
 		}
