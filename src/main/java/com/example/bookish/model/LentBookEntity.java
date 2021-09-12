@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class LentBookEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer lentbook_id;
 	
 	@Column(name="book_id")
 	private Integer book_id;
@@ -45,16 +45,24 @@ public class LentBookEntity {
 	@Column(name="user_id")
 	private Integer user_id;
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
+//
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
 
 	public Date getDate() {
 		return date;
+	}
+
+	public Integer getLentbook_id() {
+		return lentbook_id;
+	}
+
+	public void setLentbook_id(Integer lentbook_id) {
+		this.lentbook_id = lentbook_id;
 	}
 
 	public void setDate(Date date) {

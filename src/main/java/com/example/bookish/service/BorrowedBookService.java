@@ -19,8 +19,8 @@ public class BorrowedBookService {
 
 	public String addBorrowedBooks(BorrowedBookEntity borrowedbook) {
 		try {
-			if(borrowedbook.getId()!=null) {
-				BorrowedBookEntity borrowedbookentity=borrowedbookRepository.findById(borrowedbook.getId()).orElse(null);
+			if(borrowedbook.getBorrowed_books_id()!=null) {
+				BorrowedBookEntity borrowedbookentity=borrowedbookRepository.findById(borrowedbook.getBorrowed_books_id()).orElse(null);
 				if(borrowedbookentity!=null) {
 					borrowedbookentity.setBorrow_from(borrowedbook.getBorrow_from());
 					borrowedbookentity.setBook_return_status(borrowedbook.getBook_return_status());
@@ -41,8 +41,8 @@ public class BorrowedBookService {
 	
 	public String deleteBorrowedBooks(BorrowedBookEntity borrowedbooks) {
 		try {
-		if(borrowedbooks.getId()!=null) {
-			borrowedbookRepository.deleteById(borrowedbooks.getId());
+		if(borrowedbooks.getBorrowed_books_id()!=null) {
+			borrowedbookRepository.deleteById(borrowedbooks.getBorrowed_books_id());
 		}
 		return "Borrowed Book Deleted successfully";
 		}catch(Exception e) {

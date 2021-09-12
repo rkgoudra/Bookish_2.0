@@ -12,18 +12,27 @@ import javax.persistence.Table;
 public class LoginEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
+	private Integer user_id;
 	
 	@Column(name="first_name")
 	private String first_name;
 	
-	public Integer getId() {
-		return id;
+//	public Integer getId() {
+//		return id;
+//	}
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
+
+	public Integer getUser_id() {
+		return user_id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setUser_id(Integer user_id) {
+		this.user_id = user_id;
 	}
+
+	
 
 	public String getFirst_name() {
 		return first_name;

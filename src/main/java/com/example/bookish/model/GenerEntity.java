@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class GenerEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer gener_id;
 	
 	@Column(name="gener_name")
 	private String gener_name;
@@ -20,13 +20,22 @@ public class GenerEntity {
 	@Column(name="gener_status")
 	private Integer gener_status;
 
-	public Integer getId() {
-		return id;
+//	public Integer getId() {
+//		return id;
+//	}
+//
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
+	
+	public Integer getGener_id() {
+		return gener_id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setGener_id(Integer gener_id) {
+		this.gener_id = gener_id;
 	}
+
 
 	public String getGener_name() {
 		return gener_name;

@@ -19,8 +19,8 @@ public class BooksService {
 	
 	public String addBooks(BookEntity books) {
 		try {
-		if(books.getId()!=null) {
-			BookEntity bookentity=bookRepository.findById(books.getId()).orElse(null);
+		if(books.getBook_id()!=null) {
+			BookEntity bookentity=bookRepository.findById(books.getBook_id()).orElse(null);
 			if(bookentity!=null) {
 				bookentity.setBook_author(books.getBook_author());
 				bookentity.setBook_name(books.getBook_name());
@@ -42,8 +42,8 @@ public class BooksService {
 	
 	public String deleteBooks(BookEntity books) {
 		try {
-		if(books.getId()!=null) {
-			bookRepository.deleteById(books.getId());
+		if(books.getBook_id()!=null) {
+			bookRepository.deleteById(books.getBook_id());
 		}
 		return "Book Deleted successfully";
 		}catch(Exception e) {

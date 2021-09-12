@@ -18,8 +18,8 @@ public class LentBookService {
 	
 	public String addLentBook(LentBookEntity lentbook) {
 		try {
-			if(lentbook.getId()!=null) {
-				LentBookEntity lentbookentity=lentbookRepository.findById(lentbook.getId()).orElse(null);
+			if(lentbook.getLentbook_id()!=null) {
+				LentBookEntity lentbookentity=lentbookRepository.findById(lentbook.getLentbook_id()).orElse(null);
 				if(lentbookentity!=null) {
 					lentbookentity.setBook_return_status(lentbook.getBook_return_status());
 					lentbookentity.setDue_date(lentbook.getDue_date());
@@ -39,8 +39,8 @@ public class LentBookService {
 	}
 	public String deleteLentBooks(LentBookEntity lentbook) {
 		try {
-		if(lentbook.getId()!=null) {
-			lentbookRepository.deleteById(lentbook.getId());
+		if(lentbook.getLentbook_id()!=null) {
+			lentbookRepository.deleteById(lentbook.getLentbook_id());
 		}
 		return "Lent Book Deleted successfully";
 		}catch(Exception e) {

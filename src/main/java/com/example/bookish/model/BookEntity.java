@@ -17,7 +17,7 @@ public class BookEntity {
 
 	 	@Id
 	    @GeneratedValue(strategy = GenerationType.AUTO)
-	    private Integer id;
+	    private Integer book_id;
 	 	
 	 	@Column(name = "book_name")
 	    private String book_name;
@@ -106,12 +106,18 @@ public class BookEntity {
 		public void setExpected_return_date(Date expected_return_date) {
 			this.expected_return_date = expected_return_date;
 		}
-		public Integer getId() {
-			return id;
+		public Integer getBook_id() {
+			return book_id;
 		}
-		public void setId(Integer id) {
-			this.id = id;
+		public void setBook_id(Integer book_id) {
+			this.book_id = book_id;
 		}
+//		public Integer getId() {
+//			return id;
+//		}
+//		public void setId(Integer id) {
+//			this.id = id;
+//		}
 		public String getBook_name() {
 			return book_name;
 		}
