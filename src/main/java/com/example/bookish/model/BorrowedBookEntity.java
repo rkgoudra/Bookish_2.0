@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class BorrowedBookEntity {
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer borrowed_books_id;
 	
 	@Column(name="book_id")
 	private Integer book_id;
@@ -31,16 +31,24 @@ public class BorrowedBookEntity {
 	@Column(name="book_return_status")
 	private String book_return_status;
 	
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
+//	public Integer getId() {
+//		return id;
+//	}
+//
+//	public void setId(Integer id) {
+//		this.id = id;
+//	}
 
 	public Integer getBook_id() {
 		return book_id;
+	}
+
+	public Integer getBorrowed_books_id() {
+		return borrowed_books_id;
+	}
+
+	public void setBorrowed_books_id(Integer borrowed_books_id) {
+		this.borrowed_books_id = borrowed_books_id;
 	}
 
 	public void setBook_id(Integer book_id) {

@@ -17,8 +17,8 @@ public class GenerService {
 	GenerRepository generRepository;
 	public String addGener(GenerEntity gener) {
 		try {
-			if(gener.getId()!=null) {
-				GenerEntity generentity=generRepository.findById(gener.getId()).orElse(null);
+			if(gener.getGener_id()!=null) {
+				GenerEntity generentity=generRepository.findById(gener.getGener_id()).orElse(null);
 				if(generentity!=null) {
 					generentity.setGener_name(gener.getGener_name());
 					generentity.setGener_status(gener.getGener_status());
@@ -39,8 +39,8 @@ public class GenerService {
 	
 	public String deleteGener(GenerEntity gener) {
 		try {
-		if(gener.getId()!=null) {
-			generRepository.deleteById(gener.getId());
+		if(gener.getGener_id()!=null) {
+			generRepository.deleteById(gener.getGener_id());
 		}
 		return "Gener Deleted successfully";
 		}catch(Exception e) {
