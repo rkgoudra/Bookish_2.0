@@ -7,7 +7,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.bookish.model.BookEntity;
 import com.example.bookish.model.BorrowedBookEntity;
 import com.example.bookish.repository.BorrowedBookRepository;
 
