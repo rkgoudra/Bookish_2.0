@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.bookish.model.BookEntity;
 import com.example.bookish.model.BorrowedBookEntity;
 import com.example.bookish.service.BorrowedBookService;
 

@@ -7,6 +7,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.Data;
+
+@Data
 @Entity
 @Table(name = "gener")
 public class GenerEntity {
@@ -16,41 +19,7 @@ public class GenerEntity {
 	
 	@Column(name="gener_name")
 	private String gener_name;
-	
+
 	@Column(name="gener_status")
 	private Integer gener_status;
-
-//	public Integer getId() {
-//		return id;
-//	}
-//
-//	public void setId(Integer id) {
-//		this.id = id;
-//	}
-	
-	public Integer getGener_id() {
-		return gener_id;
-	}
-
-	public void setGener_id(Integer gener_id) {
-		this.gener_id = gener_id;
-	}
-
-
-	public String getGener_name() {
-		return gener_name;
-	}
-
-	public void setGener_name(String gener_name) {
-		this.gener_name = gener_name;
-	}
-
-	public Integer getGener_status() {
-		return gener_status;
-	}
-
-	public void setGener_status(Integer gener_status) {
-		this.gener_status = gener_status;
-	}
-
 }
