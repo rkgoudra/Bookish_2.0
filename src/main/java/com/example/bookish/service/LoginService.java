@@ -23,8 +23,15 @@ public class LoginService {
 			return "error while saving"+e;
 			
 		}
-		
-		
 	}
+		
+		public LoginEntity getUser(String userName,String password) {
+			LoginEntity user =  loginrepository.findUser(userName, password);
+			if(user != null ) {
+				return user;
+			}
+			return null;
+			
+		}
 
 }

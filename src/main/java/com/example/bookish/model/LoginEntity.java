@@ -11,7 +11,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "login")
+@Table(name = "Login")
 public class LoginEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
