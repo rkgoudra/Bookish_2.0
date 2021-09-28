@@ -14,24 +14,18 @@ import com.example.bookish.repository.LoginRepository;
 public class LoginService {
 	@Autowired
 	LoginRepository loginrepository;
-	
+
 	public String addLogin(LoginEntity login) {
 		try {
 			loginrepository.save(login);
 			return "User added successfully";
 		}catch(Exception e) {
 			return "error while saving"+e;
-			
+
 		}
 	}
-		
-		public LoginEntity getUser(String userName,String password) {
-			LoginEntity user =  loginrepository.findUser(userName, password);
-			if(user != null ) {
-				return user;
-			}
-			return null;
-			
-		}
 
+	public LoginEntity getUser(String email,String password) {
+		return loginrepository.findUser(email, password);
+	}
 }

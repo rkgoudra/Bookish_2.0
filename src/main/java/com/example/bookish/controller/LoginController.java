@@ -23,13 +23,13 @@ public class LoginController {
 	
 	@PostMapping("/loginUser")
 	public LoginEntity getUser(@RequestBody LoginEntity loginData) {
-		String userName = null;
+		String email = null;
 		String password = null;
-		if(loginData.getFirst_name() != null && loginData.getPassword()!= null) {
-			userName = loginData.getFirst_name();
+		if(loginData.getEmail() != null && loginData.getPassword()!= null) {
+			email = loginData.getEmail();
 			password = loginData.getPassword();
 		}
-		return loginservice.getUser(userName, password);
+		return loginservice.getUser(email, password);
 	}
 	
 	
